@@ -3,7 +3,7 @@ import time
 import serial
 
 # Jetson nano 수신부
-j_rx = serial.Serial(
+jet_rx = serial.Serial(
     port='/dev/ttyTHS1',
     baudrate=9600,
     bytesize=serial.EIGHTBITS,
@@ -16,8 +16,8 @@ time.sleep(1)
 
 while True:
     try:
-        if j_rx.readable():
-            msg = j_rx.readline().decode()
+        if jet_rx.readable():
+            msg = jet_rx.readline().decode()
             msg = msg[:len(msg)-1]
             print(msg)
 
