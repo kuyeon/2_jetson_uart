@@ -18,8 +18,7 @@ while True:
     try:
         if jet_rx.readable():
             msg = jet_rx.readline().decode()
-            msg = msg[:len(msg)-1]
-            print(msg)
+            print(msg[:len(msg)-1] + '   {}bytes'.format(len(msg)))
 
     except Exception as e:
         print(e)
