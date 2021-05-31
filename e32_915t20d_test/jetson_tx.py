@@ -22,7 +22,7 @@ while True:
         msg = 'message'.ljust(20, "-") + '[{}]\n'.format(num)
         msg_len = len(msg)
         jet_tx.write(msg.encode())
-        print('send_msg[{}], rate: {}byte per {}sec'.format(num, msg_len, sleep_rate))
+        print('send_message[{}], rate: {}bytes per {}sec'.format(num, msg_len, sleep_rate))
         num += 1
         time.sleep(sleep_rate)
     except Exception as e:
